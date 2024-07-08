@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard via tailwind & HTML/CSS</title>
+    <!-- font inject -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font inject -->
+
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-black font-poppins">
+    <div id="body" class="p-6">
+      <div class="grid grid-cols-12 justify-between justify-items-stretch">
+        <!-- sidebar -->
+        <aside
+          class="flex flex-col bg-black px-5 py-8 col-span-2 justify-self-center mt-[65px]"
+        >
+          <div class="relative w-2/4">
+            <img
+              src="./public/images/samantha.png"
+              alt="Admin Samantha Picture"
+              class="w-[72px] h-full"
+            />
+
+            <button
+              class="bg-[#DC3434] text-white absolute -top-2.5 right-2 w-[30px] h-[30px] rounded-full text-center font-medium leading-[15px]"
+            >
+              4
+            </button>
+          </div>
+          <div class="mt-4">
+            <!-- admin -->
+            <div class="text-white">
+              <h2 class="text-2xl font-semibold leading-[2.1875rem] text-left">
+                Samantha
+              </h2>
+              <p class="text-base leading-[27px] text-left opacity-60">
+                samantha@email.com
+              </p>
+            </div>
+            <!-- admin -->
+            <nav class="mt-32 text-white">
+              <ul class="space-y-8">
+                <li>
+                  <a
+                    href="#"
+                    class="text-2xl leading-[35px] opacity-50 font-medium"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-2xl leading-[35px] font-medium"
+                    >Expenses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-2xl leading-[35px] opacity-50 font-medium"
+                    >Wallets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-2xl leading-[35px] opacity-50 font-medium"
+                    >Summary</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-2xl leading-[35px] opacity-50 font-medium"
+                    >Accounts</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-2xl leading-[35px] opacity-50 font-medium"
+                    >Settings</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+        <!-- sidebar -->
+
+        <!-- main body -->
+        <main
+          class="bg-white w-full h-screen col-span-10 rounded-[20px] overflow-hidden grid grid-cols-8"
+        >
+          <div class="expenses__body col-span-6 py-[62px] px-[102px] ">
+            <!-- Expenses part -->
+            
+            <div class="expenses__chart flex flex-col justify-between">
+              <div class="heading__and__avatar flex items-start justify-between">
+                  <div class="heading__date">
+                    <h2 class="text-4xl font-semibold leading-[50px] tracking-[0.67px] text-left">
+                    Expenses
+                  </h2>
+                  <h6 class="text-base font-normal leading-6 tracking-[0.34px] text-left opacity-50 mt-2">01 - 25 March, 2020</h6>
+                </h2>
+                  </div>
+                <div class="avatar">
+                  <img src="./public/images/avatar.svg" alt="avatars" />
+                </div>
+              </div>
+              <img src="./public/images/Stats.svg" alt="states" class="mt-16" />
+            </div>
+            <!-- Expenses part -->
+
+             <!-- Today part -->
+           <div class="today__container mt-12">
+              <div class="inner__container">
+                <div class="today__heading border-b pb-3 flex items-center justify-between">
+                  <h2 class="text-lg leading-[30px] tracking-[0.3px] text-left font-semibold">
+                    Today
+                  </h2>
+                  <img src="./public/images/menu.svg" alt="">
+                </div>
+
+                <!-- icon boxes -->
+                 <div class="flex flex-col space-y-6 mt-6">
+                  <!-- Grocery -->
+                  <div id="grocery" class="flex items-start justify-between">
+                    <div class="flex items-start space-x-4">
+                      <img src="./public/images/cart.svg" alt="">
+                      <div class="space-y-0.5">
+                      <h3 class="text-base font-medium leading-6 tracking-[0.34px] text-[#273240]">Grocery</h3>
+                      <h6 class="text-sm font-normal leading-[21px] tracking-[0.5px] text-left opacity-50">5:12 pm  •  Belanja di pasar</h6>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold leading-6 tracking-[0.34px] text-right">-326.800</h3>
+                  </div>
+                  <!-- Grocery -->
+                   
+                  <!-- Transport -->
+                  <div id="grocery" class="flex items-start justify-between">
+                    <div class="flex items-start space-x-4">
+                      <img src="./public/images/train.svg" alt="">
+                      <div class="space-y-0.5">
+                      <h3 class="text-base font-medium leading-6 tracking-[0.34px] text-[#273240]">Transportation</h3>
+                      <h6 class="text-sm font-normal leading-[21px] tracking-[0.5px] text-left opacity-50">5:12 pm  •  Naik bus umum</h6>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold leading-6 tracking-[0.34px] text-right">-15.000</h3>
+                  </div>
+                  <!-- Transport -->
+                      
+                  <!-- Housing -->
+                  <div id="grocery" class="flex items-start justify-between">
+                    <div class="flex items-start space-x-4">
+                      <img src="./public/images/home.svg" alt="">
+                      <div class="space-y-0.5">
+                      <h3 class="text-base font-medium leading-6 tracking-[0.34px] text-[#273240]">Housing</h3>
+                      <h6 class="text-sm font-normal leading-[21px] tracking-[0.5px] text-left opacity-50">5:12 pm  •  Bayar Listrik</h6>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold leading-6 tracking-[0.34px] text-right">-185.750</h3>
+                  </div>
+                  <!-- Housing -->
+                  
+                 </div>
+                <!-- icon boxes -->
+                </div>  
+           </div>
+          <!-- Today part -->
+
+
+             <!-- Today part -->
+           <div class="today__container mt-12">
+              <div class="inner__container">
+                <div class="today__heading border-b pb-3 flex items-center justify-between">
+                  <h2 class="text-lg leading-[30px] tracking-[0.3px] text-left font-semibold">
+                    Monday, 23 March 2020
+                  </h2>
+                  <img src="./public/images/menu.svg" alt="">
+                </div>
+
+                <!-- icon boxes -->
+                 <div class="flex flex-col space-y-6 mt-6">
+                  <!-- Food And Drink -->
+                  <div id="grocery" class="flex items-start justify-between">
+                    <div class="flex items-start space-x-4">
+                      <img src="./public/images/buffet.svg" alt="">
+                      <div class="space-y-0.5">
+                      <h3 class="text-base font-medium leading-6 tracking-[0.34px] text-[#273240]">Food and Drink</h3>
+                      <h6 class="text-sm font-normal leading-[21px] tracking-[0.5px] text-left opacity-50">5:12 pm  •  Makan Steak</h6>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold leading-6 tracking-[0.34px] text-right">-156.000</h3>
+                  </div>
+                  <!-- Food And Drink -->
+                   
+                  <!-- Entertainment -->
+                  <div id="grocery" class="flex items-start justify-between">
+                    <div class="flex items-start space-x-4">
+                      <img src="./public/images/play.svg" alt="">
+                      <div class="space-y-0.5">
+                      <h3 class="text-base font-medium leading-6 tracking-[0.34px] text-[#273240]">Entertainment</h3>
+                      <h6 class="text-sm font-normal leading-[21px] tracking-[0.5px] text-left opacity-50">55:12 pm  •  Nonton Bioskop</h6>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold leading-6 tracking-[0.34px] text-right">-35.200</h3>
+                  </div>
+                  <!-- Entertainment -->
+                  
+                 </div>
+                <!-- icon boxes -->
+                </div>  
+           </div>
+          <!-- Today part -->
+          </div>
+
+          <!-- opposite column -->
+          <div class="summary__side__body bg-[#f9fafc] col-span-2 py-[76px] px-[50px] ">
+            <h2 class="text-xl leading-[30px] tracking-[0.33px] font-medium">Where your money go?</h2>
+          <div class="flex flex-col justify-between h-full">
+
+              <div class="flex flex-col space-y-6 mt-16">
+
+              <!-- Food and drinks -->
+              <div class="w-full space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">Food and Drinks</h4><h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">872.400</h4>
+                </div>
+              <div id="progress__bar" class="relative h-1 w-full bg-[#eceff5] rounded-full before:content-[''] before:w-[60px] before:bg-[#31BA96] before:absolute before:h-full before:rounded-full"></div>
+              </div>
+              <!-- Food and drinks -->
+
+              <!-- Shopping -->
+              <div class="w-full space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">Shopping</h4><h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">1.378.200</h4>
+                </div>
+                <div id="progress__bar" class="relative h-1 w-full bg-[#eceff5] rounded-full before:content-[''] before:w-[110px] before:bg-[#31BA96] before:absolute before:h-full before:rounded-full"></div>
+              </div>
+              <!-- Shopping -->
+
+              <!-- Housing -->
+              <div class="w-full space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">Housing</h4><h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">928.500</h4>
+                </div>
+                <div id="progress__bar" class="relative h-1 w-full bg-[#eceff5] rounded-full before:content-[''] before:w-[90px] before:bg-[#31BA96] before:absolute before:h-full before:rounded-full"></div>
+              </div>
+              <!-- Housing -->
+
+                <!-- Transportation -->
+              <div class="w-full space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">Transportation</h4><h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">420.700</h4>
+                </div>
+                <div id="progress__bar" class="relative h-1 w-full bg-[#eceff5] rounded-full before:content-[''] before:w-[60px] before:bg-[#31BA96] before:absolute before:h-full before:rounded-full"></div>
+              </div>
+              <!-- Transportation -->
+
+              
+                <!-- Vehicle -->
+              <div class="w-full space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">Vehicle</h4><h4 class="text-[13px] font-medium text-[#273240] leading-[24px] tracking-[0.46px]">520.000</h4>
+                </div>
+                <div id="progress__bar" class="relative h-1 w-full bg-[#eceff5] rounded-full before:content-[''] before:w-[90px] before:bg-[#31BA96] before:absolute before:h-full before:rounded-full"></div>
+              </div>
+              <!-- Vehicle -->
+            </div>
+
+            <!-- Gift box -->
+             <div class="bg-[#edf0f6] rounded-2xl px-6 space-y-7 relative">
+                <div class=" flex items-center justify-between w-full -mt-6">
+                  <img src="./public/images/box.svg" class="w-[84px] h-[72px]" alt="">
+                  <img src="./public/images/Illustration.svg" class="w-[52px] h-[90px]" alt="">
+                </div>
+              <div class="flex flex-col space-y-3 ">
+                <h3 class="text-base text-[#273240]  font-semibold">Save more money</h3>
+                <p class="">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+              </div>
+              <img src="./public/images/button.svg" class="cursor-pointer pb-10 m-auto" alt="">
+             </div>
+            <!-- Gift box -->
+          </div>
+          </div>
+          <!-- opposite column -->
+         
+          
+        </main>
+ 
+        <!-- main body -->
+      </div>
+    </div>
+  </body>
+</html>
